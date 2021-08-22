@@ -10,6 +10,8 @@ const connect = function (data) {
     conn.on('connect', () => {
       console.log("Successfully connected to game server")
       conn.write('Name: URC')
+      //conn.write('Move: up')
+      //conn.write('Move: down')
 
     })
     conn.on('data', (data) => { 
