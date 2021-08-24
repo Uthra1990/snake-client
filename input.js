@@ -11,22 +11,27 @@ const setupInput = function(conn) {
     stdin.resume();
 
     const handleUserInput = function(key) {
- 
+      
       if (key === '\u0003') {
         process.exit(); 
       }
-      console.log('_______________', key)
+      //console.log('_______________', key)
+      
       if (key === 'w') {
         conn.write('Move: up') 
+        conn.write('Say: Go up')
       }
       if (key === 'a') {
-        conn.write("Move: left")
+        conn.write('Move: left')
+        //conn.write('Say: Goin left')
       }
       if (key === 's') {
-        conn.write("Move: down")
+        conn.write('Move: down')
+        //conn.write('Say: Goin down')
       } 
       if (key === 'd') {
-        conn.write("Move: right")
+        conn.write('Move: right')
+        //conn.write('Say: Goin right')
       }
     }
     
